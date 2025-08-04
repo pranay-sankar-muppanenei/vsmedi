@@ -1,7 +1,7 @@
 // src/ui/CustomDropdown.jsx
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
-import {Link} from "react-router-dom"; // Only if using Next.js
+import { Link } from "react-router-dom";
 
 const CustomDropdown = ({ label = "Select", items = [] }) => {
   const [open, setOpen] = useState(false);
@@ -12,12 +12,22 @@ const CustomDropdown = ({ label = "Select", items = [] }) => {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      <button className="flex items-center hover:text-[#C5FA2D] gap-1 font-semibold">
-        {label} <FaChevronDown className="text-[14px] mt-[2px]" />
+      {/* Button */}
+      <button className="flex items-center hover:text-[#C5FA2D] gap-1 font-semibold transition-colors">
+        {label}
+        <FaChevronDown
+          className={`text-[14px] mt-[2px] transform transition-transform duration-300 ${
+            open ? "rotate-180" : "rotate-0"
+          }`}
+        />
       </button>
 
+      {/* Dropdown Menu */}
       {open && (
-        <ul className="absolute top-full pl-1 py-2 pr-2 left-0 w-56 bg-white shadow-lg border z-50">
+        <ul
+          className="absolute top-full left-0 w-56 bg-white shadow-lg border z-50
+                     transition-all duration-300 ease-in-out opacity-100"
+        >
           {items.map((item, index) => (
             <li key={index}>
               <Link
