@@ -50,11 +50,11 @@ const Home = () => {
   }, [animate]);
 
   return (
-    <section className="hero-section overflow-x-hidden  relative bg-white  py-10 lg:py-20">
+    <section className="hero-section overflow-x-hidden  relative bg-white px-4  py-10 lg:py-20">
       {/* Hero Section */}
       
 
-      <div className="bg-gradient-to-r from-[#001f25] via-[#006d70] to-[#00c2b0] py-12 mt-5">
+      <div className=" py-12 mt-5">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4">
           {/* Left Content */}
           <div
@@ -63,13 +63,13 @@ const Home = () => {
             }`}
           >
             {/* Main Heading */}
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black mb-4">
               Best Multispecialty Clinic in Jaipur –{" "}
               <span className="text-[#83ba4c]">VS Medihub</span>
             </h2>
 
             {/* Short Description */}
-            <p className="text-base sm:text-lg text-white mb-6 leading-relaxed">
+            <p className="text-base sm:text-lg text-black mb-6 leading-relaxed">
               Delivering advanced medical care & holistic wellness under one roof. Our
               team of specialists ensures comprehensive treatment plans tailored to
               your needs.
