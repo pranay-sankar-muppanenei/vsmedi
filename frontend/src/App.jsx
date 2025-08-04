@@ -9,6 +9,7 @@ import Footer from './layout/Footer';
 import Home from './components/Home';
 import ContactUs from './components/ContactUs';
 import NotFound from './components/NotFound';
+import SpecialityDetail from './components/SpecialityDetail';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
         <Route exact path='/diagnostic' element={<Diagnostic/>}/>
         <Route exact path='/contact-us' element={<ContactUs/>}/> 
         <Route path='/not-found' element={<NotFound/>}/>
-          <Route path="*" element={<NotFound />} />{/* 👈 Show Prenatal Yoga on `/prenatal-yoga` */ }
+          <Route path="*" element={<NotFound />} />
+          <Route path="/specialities/:speciality" element={<SpecialityDetail />} />{/* 👈 Show Prenatal Yoga on `/prenatal-yoga` */ }
         {/* You can add more routes here later */}
       </Routes>
       </main>
