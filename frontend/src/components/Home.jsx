@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaPhoneAlt } from 'react-icons/fa';
 import SpecialitiesGrid from './SpecialitiesGrid';
+import WhyChooseUs from './WhyChooseUs';
 
 const Home = () => {
   const [animate, setAnimate] = useState(false);
@@ -141,6 +142,11 @@ const Home = () => {
 </div>
 
 {/* Our Services */}
+
+
+<SpecialitiesGrid/>
+
+<WhyChooseUs/>
 <div className="max-w-7xl mx-auto px-4 mt-12">
   <div className="grid md:grid-cols-2 gap-10 items-center bg-white rounded-lg border border-transparent p-6 shadow-sm transition duration-300 transform hover:scale-[1.02] hover:border-green-500 hover:shadow-[0_0_25px_rgba(34,197,94,0.4)]">
     {/* Text */}
@@ -184,8 +190,6 @@ const Home = () => {
     </div>
   </div>
 </div>
-
-<SpecialitiesGrid/>
 
 
     </section>
