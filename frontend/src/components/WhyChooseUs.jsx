@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12">
+    <section className="max-w-7xl mx-auto px-4  py-12 mb-30">
       {/* Heading */}
       <div className="text-center">
         <p className="text-green-600 uppercase tracking-wide font-semibold mb-2">
@@ -34,19 +34,20 @@ const WhyChooseUs = () => {
         </p>
                 <div className="w-16 border-b-4 border-green-600 mx-auto mt-3 rounded-full mb-3"></div>
         <h2 className="text-3xl mb-5 font-bold text-gray-900">
-          Why Choose VS Medihub?
-        </h2>
+  Why Choose <span className="italic text-2xl">VS Medihub?</span>
+</h2>
+
 
       </div>
 
       {/* Cards */}
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center p-6 gap-8">
   {reasons.map((reason, idx) => (
     <div
       key={idx}
-      className="bg-white border border-gray-200 rounded-lg p-6 text-center shadow-sm transition duration-300 transform hover:scale-[1.02] hover:border-green-500 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] w-64"
+      className="bg-white flex flex-col items-center justify-center border border-gray-200 rounded-lg p-6 text-center shadow-sm transition duration-300 transform hover:scale-[1.02] hover:border-green-500 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] w-64 h-[200px] w-[280px]"
     >
-      <div className="text-green-600 text-4xl mb-4 flex justify-center">
+      <div className="text-green-600 text-5xl mb-4 flex justify-center">
         {reason.icon}
       </div>
       <h3 className="font-semibold text-lg text-gray-800 mb-2">
