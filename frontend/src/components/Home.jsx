@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaPhoneAlt } from 'react-icons/fa';
+import SpecialitiesGrid from './SpecialitiesGrid';
 
 const Home = () => {
   const [animate, setAnimate] = useState(false);
@@ -183,6 +184,8 @@ const Home = () => {
     </div>
   </div>
 </div>
+
+<SpecialitiesGrid/>
 
 
     </section>
