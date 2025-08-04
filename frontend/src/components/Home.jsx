@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { FaPhoneAlt } from 'react-icons/fa';
+import { FaPhoneAlt, FaWhatsapp, FaCalendarAlt } from "react-icons/fa";
 import SpecialitiesGrid from './SpecialitiesGrid';
 import WhyChooseUs from './WhyChooseUs';
+import SpecializationSection from './SpecializationSection';
 
 const Home = () => {
   const [animate, setAnimate] = useState(false);
@@ -49,50 +50,77 @@ const Home = () => {
   }, [animate]);
 
   return (
-    <section className="overflow-x-hidden relative bg-white px-4 py-10 lg:py-20">
+    <section className="hero-section overflow-x-hidden  relative bg-white  py-10 lg:py-20">
       {/* Hero Section */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        <div
-          className={`transition-all duration-1000 ease-out ${
-            animate ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
-          }`}
-        >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-green-700 mb-4">
-            An Elegant Multispecialty Clinic & Wellness Hub
-          </h2>
-          <p className="text-base sm:text-lg text-gray-800 mb-4 leading-relaxed">
-            <span className="font-semibold text-green-600">VS Medihub</span> blends
-            advanced medical treatments with holistic wellness practices to deliver a
-            modern approach to healthcare.
-          </p>
-          <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-            This combination offers complete care for physical and mental well-being,
-            ensuring long-term health and satisfaction for patients.
-          </p>
-          <div className="flex items-center text-lg font-bold text-gray-800 mt-4">
-            <FaPhoneAlt className="mr-2 text-xl text-gray-700" />
-            +91 72404 45656
-          </div>
-        </div>
+      
 
-        <div
-          className={`transition-all duration-1000 ease-out ${
-            animate ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
-          } relative lg:-right-10`}
-        >
-          <div className="relative z-10">
-            <img
-              src="/hospital.png"
-              alt="VS Medihub Building"
-              className="rounded-xl shadow-xl w-full max-w-[500px] mx-auto"
-            />
+      <div className="bg-gradient-to-r from-[#001f25] via-[#006d70] to-[#00c2b0] py-12 mt-5">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-4">
+          {/* Left Content */}
+          <div
+            className={`transition-all duration-1000 ease-out ${
+              animate ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
+            }`}
+          >
+            {/* Main Heading */}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-4">
+              Best Multispecialty Clinic in Jaipur –{" "}
+              <span className="text-[#83ba4c]">VS Medihub</span>
+            </h2>
+
+            {/* Short Description */}
+            <p className="text-base sm:text-lg text-white mb-6 leading-relaxed">
+              Delivering advanced medical care & holistic wellness under one roof. Our
+              team of specialists ensures comprehensive treatment plans tailored to
+              your needs.
+            </p>
+
+            {/* Contact Number */}
+            
+
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4">
+              <button className="flex items-center gap-2 bg-green-700 text-white px-5 py-3 rounded-lg shadow-md hover:bg-green-800 transition">
+                <FaCalendarAlt /> Book Appointment
+              </button>
+              <a
+                href="tel:+917240445656"
+                className="flex items-center gap-2 bg-lime-100 text-green-800 px-5 py-3 rounded-lg shadow-md hover:bg-lime-200 transition"
+              >
+                <FaPhoneAlt /> Call Now
+              </a>
+              <a
+                href="https://wa.me/917240445656"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-green-100 text-green-800 px-5 py-3 rounded-lg shadow-md hover:bg-green-200 transition"
+              >
+                <FaWhatsapp /> WhatsApp
+              </a>
+            </div>
           </div>
-          <div className="absolute top-0 left-0 w-full h-full rounded-full bg-lime-300/30 -z-10"></div>
+
+          {/* Right Image */}
+          <div
+            className={`transition-all duration-1000 ease-out ${
+              animate ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
+            } relative lg:-right-10`}
+          >
+            <div className="relative z-10">
+              <img
+                src="/hospital.png"
+                alt="VS Medihub Building"
+                className="rounded-xl shadow-xl w-full max-w-[500px] mx-auto"
+              />
+            </div>
+            <div className="absolute top-0 left-0 w-full h-full rounded-full  -z-10"></div>
+          </div>
         </div>
       </div>
 
-      {/* Stats */}
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-black">
+
+
+       {/*<div className=" px-4 mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-black">
   {[
     { count: `${counts.doctors}+`, label: "Renowned Doctors" },
     { count: `${counts.patients.toLocaleString()}+`, label: "Satisfied Patients" },
@@ -111,7 +139,8 @@ const Home = () => {
       </p>
     </div>
   ))}
-</div>
+</div>*/}
+  
 
 
       {/* About VS MediHub */}
@@ -145,8 +174,8 @@ const Home = () => {
 
 
 <SpecialitiesGrid/>
-
 <WhyChooseUs/>
+<SpecializationSection counts={counts} />
 <div className="max-w-7xl mx-auto px-4 mt-12">
   <div className="grid md:grid-cols-2 gap-10 items-center bg-white rounded-lg border border-transparent p-6 shadow-sm transition duration-300 transform hover:scale-[1.02] hover:border-green-500 hover:shadow-[0_0_25px_rgba(34,197,94,0.4)]">
     {/* Text */}

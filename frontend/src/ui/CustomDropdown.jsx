@@ -25,7 +25,7 @@ const CustomDropdown = ({ label = "Select", items = [] }) => {
       {/* Dropdown Menu */}
       {open && (
         <ul
-          className="absolute top-full left-0 w-56 bg-white shadow-lg border z-50
+          className="absolute top-full  left-5  w-56 bg-white shadow-lg border z-50
                      transition-all duration-300 ease-in-out opacity-100"
         >
           {items.map((item, index) => (
