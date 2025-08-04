@@ -98,7 +98,7 @@ const Footer = () => {
               placeholder="Email"
               className="px-3 py-2 text-sm rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
-            <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition font-semibold">
+            <button className="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-600 transition font-semibold">
               Subscribe Now
             </button>
           </div>
